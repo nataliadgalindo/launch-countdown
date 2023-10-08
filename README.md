@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (<https://www.frontendmentor.io/solutions/responsive-launch-countdown-timer-made-with-react-and-flexbox-w6nwBLTI7->)
+- Live Site URL: (<https://timer-countdown-launch.netlify.app>)
 
 ## My process
 
