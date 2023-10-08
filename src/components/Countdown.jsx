@@ -1,6 +1,6 @@
-export function calculateTime(currentDate) {
+export function calculateTime(targetTime) {
   const currentTime = new Date().getTime()
-  const difference = currentDate - currentTime
+  const difference = targetTime - currentTime
 
   if (difference <= 0) {
     return {
@@ -15,9 +15,10 @@ export function calculateTime(currentDate) {
     .toString()
     .padStart(2, "0")
   const hours = Math.floor(
-    (difference % (1000 * 60 * 60 * 24)) /
-      (1000 * 60 * 60).toString().padStart(2, "0")
+    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   )
+    .toString()
+    .padStart(2, "0")
   const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
     .toString()
     .padStart(2, "0")
