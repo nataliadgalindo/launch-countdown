@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot of my countdown timer solution](/assets/images/countdown-timer.jpeg)
+![screenshot of my countdown timer solution](/public/assets/images/countdown-timer.jpeg)
 
 ### Links
 
