@@ -1,0 +1,252 @@
+/* red-hat-text-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/red-hat-text-v14-latin-700.woff2") format("woff2");
+}
+
+:root {
+  /* primary */
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+
+  /* neutral */
+  --desaturated-blue: hsl(236, 21%, 26%);
+  --dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue: hsl(234, 17%, 12%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+  background: url("/assets/images/bg-stars.svg") center/cover no-repeat
+    var(--dark-blue);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* header */
+
+header h1 {
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 8px;
+  font-size: 1.25rem;
+}
+
+/* countdown */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.counter {
+  width: 75px;
+}
+
+.time {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #2c2c44 50%,
+    var(--desaturated-blue) 50%
+  );
+  border-radius: 4px;
+  padding: 0.6rem 0;
+  margin-bottom: 1rem;
+  box-shadow: 0px 7px 0px 0px var(--very-dark-blue);
+}
+
+.time::before,
+.time::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  background-color: var(--very-dark-blue);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.time::before {
+  border-radius: 10px 10px 0 0;
+  left: -3px;
+}
+
+.time::after {
+  border-radius: 0 0 10px 10px;
+  right: -3px;
+}
+
+.custom-hr {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: var(--very-dark-blue);
+  height: 0.5px;
+}
+
+.time h2 {
+  color: var(--soft-red);
+  font-size: 2.6rem;
+  margin: auto;
+}
+
+.counter h3 {
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  font-size: 0.5rem;
+  letter-spacing: 4px;
+}
+
+/* footer */
+
+footer {
+  width: 100vw;
+  height: 197px;
+  background: url("/assets/images/pattern-hills.svg") right/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.socials {
+  align-self: end;
+}
+
+.socials svg {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.socials svg:hover path {
+  fill: var(--soft-red);
+}
+
+@media screen and (min-width: 375px) {
+  .countdown {
+    flex-wrap: nowrap;
+    margin: 4rem 0 7rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .countdown {
+    margin: 5rem 0 7rem;
+  }
+
+  .counter {
+    width: 85px;
+  }
+
+  .time {
+    padding: 0.75rem 0;
+  }
+
+  .counter h3 {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .counter {
+    width: 112px;
+  }
+
+  .time {
+    margin-bottom: 1.25rem;
+  }
+
+  .time h2 {
+    font-size: 4rem;
+  }
+
+  .counter h3 {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .counter {
+    width: 128px;
+  }
+
+  .time {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    box-shadow: 0 10px 0 0 var(--very-dark-blue);
+  }
+
+  .time h2 {
+    font-size: 4.5rem;
+  }
+
+  .counter h3 {
+    font-size: 0.9rem;
+    letter-spacing: 6px;
+  }
+
+  .time::before,
+  .time::after {
+    width: 14px;
+    height: 7px;
+  }
+
+  .time::before {
+    left: -4px;
+  }
+
+  .time::after {
+    right: -4px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .countdown {
+    margin: 6rem 0 8rem;
+    gap: 2rem;
+  }
+
+  .counter {
+    width: 154px;
+  }
+
+  .time {
+    margin-bottom: 1.75rem;
+  }
+
+  .time h2 {
+    font-size: 5rem;
+  }
+
+  .counter h3 {
+    font-size: 1rem;
+  }
+}
